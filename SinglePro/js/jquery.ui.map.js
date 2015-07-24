@@ -1,6 +1,5 @@
  /*!
  * jQuery FN Google Map 3.0-rc
-
  * http://code.google.com/p/jquery-ui-map/
  * Copyright (c) 2010 - 2012 Johan Säll Larsson
  * Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php
@@ -310,7 +309,7 @@
 		 */
 		_latLng: function(latLng) {
 			if ( !latLng ) {
-				return new google.maps.LatLng(0.0,0.0);
+				return new google.maps.LatLng(0.0, 0.0);
 			}
 			if ( latLng instanceof google.maps.LatLng ) {
 				return latLng;

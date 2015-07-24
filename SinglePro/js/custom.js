@@ -358,7 +358,7 @@ jQuery(function($){
 	  var zoom= $('#map_canvas').gmap('option', 'zoom');
       
       $('#map_canvas').gmap().bind('init', function(ev, map) {
-        $('#map_canvas').gmap('addMarker', {'position': '10.073273,76.597408', 'bounds': true});
+        $('#map_canvas').gmap('addMarker', {'position': '57.7973433,12.0502107', 'bounds': true});
         $('#map_canvas').gmap('option', 'zoom', 13);
       });
 
@@ -456,24 +456,6 @@ jQuery(function($){
 	$('.navbar-nav').on('click', 'li a', function() {
 	  $('.navbar-collapse').collapse('hide');
 	});
-	
-$('#csend').on('click',function(){
-	var url = "mailer.php";
-	
-	$.ajax({
-		url : url,
-		type : 'POST',
-		data : {
-//			'page' : $page,
-//			'sort':sort,
-//			'sortId':sortId,
-//			'searchTerm' : $searchterm,						
-		},
-		async : false,
-		dataType : 'html',
-		cache : false,
-	});
-	alert('hai');
-});
+
 	
 });

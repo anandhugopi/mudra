@@ -1,17 +1,8 @@
 <?php
-
-require 'phpmailer/JPhpMailer.php';
-$mail = new JPhpMailer();
-$mail->IsSMTP ();
-$mail->SMTPDebug=1;
-$mail->Host = 'smtp.live.com';
-$mail->SMTPAuth = true;
-$mail->SMTPSecure = 'tls';
-$mail->Port = 587;
-$mail->Username = "";
-$mail->Password = ""; // best to keep this in your config file
-$mail->SetFrom ( "anandhupg@gmail.com", 'Rensup' );
-$mail->Subject = "fdhjsdfsd";
-$mail->Body = "dsfsdfsdfsdfsf";
-$mail->AddAddress ( "anandhu.gopi@digitalmesh.com" );
-$mail->Send ();
+$to='';
+$message = "Line 1\r\nLine 2\r\nLine 3";
+// In case any of our lines are larger than 70 characters, we should use wordwrap()
+$message = wordwrap($message, 70, "\r\n");
+// Send
+mail('caffeinated@example.com', 'My Subject', $message);
+?>
